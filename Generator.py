@@ -1,33 +1,28 @@
 import random
-import string
 
-print("Password Generator")
+length = int(input("Enter length: "))
 
-length = int(input("Enter your password length: "))
+b = input("Uppercase? ").lower()
+f = input("Lowercase? ").lower()
+d = input("Numbers? ").lower()
+e = input("Symbols? ").lower()
 
-b = input("Include Uppercase? (yes/no): ").lower()
-f = input("Include Lowercase? (yes/no): ").lower()
-d = input("Include numbers? (yes/no): ").lower()
-e = input("Include symbols? (yes/no): ").lower()
-
-# Build character pool
 characters = ""
 
 if b == "yes":
-    characters += string.ascii_uppercase
+    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 if f == "yes":
-    characters += string.ascii_lowercase
+    characters += "abcdefghijklmnopqrstuvwxyz"
 
 if d == "yes":
-    characters += string.digits
+    characters += "0123456789"
 
 if e == "yes":
-    characters += string.punctuation
+    characters += "!@#$%^&*()_+-=[]{}|;:,.<>?/"
 
-# Safety check
 if characters == "":
-    print("Please select at least one option!")
+    print("Select at least one option!")
 else:
     password = ""
 
