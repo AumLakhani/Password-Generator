@@ -2,17 +2,17 @@ import random
 
 length = int(input("Enter length: "))
 
-b = input("Uppercase? ").lower()
-f = input("Lowercase? ").lower()
-d = input("Numbers? ").lower()
-e = input("Symbols? ").lower()
+b = input("Uppercase? yes/no?")
+c = input("Lowercase? yes/no?")
+d = input("Numbers? yes/no?")
+e = input("Symbols? yes/no?")
 
 characters = ""
 
 if b == "yes":
     characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-if f == "yes":
+if c == "yes":
     characters += "abcdefghijklmnopqrstuvwxyz"
 
 if d == "yes":
@@ -22,7 +22,7 @@ if e == "yes":
     characters += "!@#$%^&*()_+-=[]{}|;:,.<>?/"
 
 if characters == "":
-    print("Select at least one option!")
+    print("Select the options firstly")
 else:
     password = ""
 
